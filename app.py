@@ -39,9 +39,9 @@ if uploaded_file is not None:
                 if len(reason) > 3:
                     data.append({"Reason": reason, "Leads": count})
 
-    if data:
-        # ... (keep your DataFrame and Matplotlib code) ...
-    else:
-        st.error("Could not parse data.")
-        st.info("The OCR saw the following text. If this looks messy, the image quality might be too low:")
-        st.code(raw_text) # This helps you see exactly what the AI is seeing
+        if data:
+            # ... (keep your DataFrame and Matplotlib code) ...
+        else:
+            st.error("Could not parse data.")
+            st.info("The OCR saw the following text. If this looks messy, the image quality might be too low:")
+            st.code(raw_text) # This helps you see exactly what the AI is seeing
